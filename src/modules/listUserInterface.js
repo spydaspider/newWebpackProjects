@@ -1,34 +1,27 @@
-const TodoLists = [
-  {
-    id: 1,
-    description: 'Wash the dishes',
-    completed: true,
-  },
-  {
-    id: 2,
-    description: 'Complete the Todo List Project',
-    completed: false,
-  },
-];
+import ListStore from './listStore.js';
 
 export default class ListUserInterface {
   static showLists = () => {
-    const lists = TodoLists;
-    ListUserInterface.addToDom(lists);
+    const lists = ListStore.getListFromLS();
+    lists.forEach((list) => ListUserInterface.addToDom(list));
   };
 
-  static addToDom = (lists) => {
+  static addToDom = (list) => {
     const listClass = document.querySelector('.lists');
-    lists.forEach((list) => {
-      listClass.insertAdjacentHTML(
-        'beforeend',
-        `
+    listClass.insertAdjacentHTML(
+      'beforeend',
+      `
             <div class="todolists">
               <input class="input-check" type="checkbox" /><label class="check">${list.description}</label>
-              <i class="fa fa-ellipsis-v"></i>
+              <div class = "icon">
+              <i class="fa fa-ellipsis-v add"></i>
+              </div>
             </div>
             `,
-      );
-    });
-  };
+    );
+  }
+
+  static removeFromDom = (target) => {
+    target.remove();
+  }
 }

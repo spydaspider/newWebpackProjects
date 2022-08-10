@@ -76,12 +76,11 @@ input {
 }
 
 .todolists i {
-  margin-top: 0.5em;
+  margin-top: 0.6em;
   cursor: pointer;
   padding-left: 0.3em;
   font-size: 30px;
 }
-
 .input-check {
   grid-column: 1/2;
   width: 18px;
