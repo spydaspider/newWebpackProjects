@@ -45,7 +45,7 @@ Navigate through the web page to find the information you need. Use the links in
 
 👤 **Dickson Amankwaah**
 
-- GitHub: [@githubhandle](https://github.com/spydaspider/Micronaut-Dickson-Amankwah)
+- GitHub: [@githubhandle](https://github.com/spydaspider/newWebpackProjects)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/spyda-spider-a64373131/)
 
 
