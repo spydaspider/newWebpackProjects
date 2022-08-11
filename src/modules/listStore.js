@@ -36,6 +36,14 @@ export default class ListStore {
       localStorage.setItem('lists', JSON.stringify(lists));
     }
 
+    static setAllCompletedFalse = () => {
+      const lists = ListStore.getListFromLS();
+      lists.forEach((list) => {
+        list.completed = false;
+      });
+      localStorage.setItem('lists', JSON.stringify(lists));
+    }
+
     static removeFromLS = (targetIndex) => {
       const lists = ListStore.getListFromLS();
       lists.splice(targetIndex, 1);

@@ -16,7 +16,7 @@ body {
 }
 
 .list-wrapper {
-  grid-column: 3/11;
+  grid-column: 4/10;
   grid-row: 2 / span 8;
   height: auto;
   display: grid;
@@ -144,6 +144,14 @@ button {
   border: none;
   color: rgb(126 124 124);
   cursor: pointer;
+}
+
+.clear button:hover {
+  background: rgb(230 228 228);
+}
+
+.clear button:active {
+  background: rgb(214 213 213);
 }
 
 @media screen and (max-width: 768px) {

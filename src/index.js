@@ -3,6 +3,7 @@ import ListUserInterface from './modules/listUserInterface.js';
 import CreateTodoList from './modules/createTodoList.js';
 import ListStore from './modules/listStore.js';
 import DOMChanges from './modules/DOMChanges.js';
+import ClearAllCompleted from './modules/clearAllCompleted.js';
 // Initialize an empty array.
 // document.addEventListener('DOMContentLoaded', ListUserInterface.showLists);
 document.addEventListener('DOMContentLoaded', () => {
@@ -55,9 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
       DOMChanges.domChangeToRemove(e.target);
     }
   });
+  ListStore.setAllCompletedFalse();
 
   DOMChanges.editDom();
+  // Add eventListener to the clear all button
+  document.querySelector('.clear').addEventListener('click', () => {
+    ClearAllCompleted.clear();
+    window.location.reload();
+  });
 });
-/*  const newElement = document.createElement('img');
-  newElement.src = arrow;
-  document.body.appendChild(newElement); */
