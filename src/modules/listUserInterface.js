@@ -8,13 +8,17 @@ export default class ListUserInterface {
 
   static addToDom = (list) => {
     const listClass = document.querySelector('.lists');
+
     listClass.insertAdjacentHTML(
       'beforeend',
       `
             <div class="todolists">
-              <input class="input-check" type="checkbox" /><label class="check">${list.description}</label>
+              <input class="input-check" type="checkbox" />
+            
+              <label class="check">${list.description}</label>
+              
               <div class = "icon">
-              <i class="fa fa-ellipsis-v add"></i>
+        <i class="fa fa-ellipsis-v"></i>
               </div>
             </div>
             `,

@@ -8,6 +8,8 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    assetModuleFilename: 'images/[name][hash][ext][query]',
+
   },
   module: {
     rules: [
@@ -16,9 +18,15 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.html$/,
+        use: ['html-loader'],
+      },
+
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',

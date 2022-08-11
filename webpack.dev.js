@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: 'images/[hash][ext][query]',
+    assetModuleFilename: 'images/[name][hash][ext][query]',
 
     clean: true,
   },
@@ -22,9 +22,10 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        test: /\.html$/,
+        use: ['html-loader'],
       },
+
     ],
   },
   plugins: [

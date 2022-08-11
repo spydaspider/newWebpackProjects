@@ -75,18 +75,28 @@ input {
   margin-top: 0.2em;
 }
 
-.todolists i {
+.todolists .icon {
   margin-top: 0.6em;
   cursor: pointer;
   padding-left: 0.3em;
   font-size: 30px;
 }
+
 .input-check {
   grid-column: 1/2;
   width: 18px;
   margin-top: 0.2em;
   cursor: pointer;
   margin-left: 20%;
+}
+
+.edit-list {
+  grid-column: 2/12;
+  pointer-events: none;
+}
+
+.edit-list.active {
+  pointer-events: fill;
 }
 
 input:focus {
@@ -103,8 +113,15 @@ input:focus {
 
 .check {
   grid-column: 2/12;
-  font-size: 20px;
   padding: 1em 0;
+  font-size: 20px;
+}
+
+.edit-input {
+  grid-column: 2/12;
+  border: 2px solid rgb(196 194 194);
+  margin-bottom: 0.2em;
+  border-radius: 8px;
 }
 
 .anchor-icon {
